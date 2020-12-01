@@ -1,0 +1,58 @@
+Package structure
+/menu
+|- subpackage: combo
+	| - regularcombo.py
+		| - Class: Regularcombo(burger = x, snack = y, drink = z)
+        		Parameter: x, y, z: list of str, optional
+		| - function: snack_custom(h)
+        		Parameter: h: str, optional
+		| - function: snack_custom(m)
+        		Parameter: m: str, optional
+		| - function: snack_custom(h)
+		Parameter: m: str, optional
+		| - function: display()
+        		Return: 3 lists of str
+		| - function: total_price()
+        		Return: float(total price)
+	| - dietcombo.py
+		| - Class: Dietcombo(burger = x, snack = y, drink = z)
+        		Parameter: x, y, z: list of str, optional
+		| - function: drink_check()
+        		Return: warning message(when drink not diet)
+		| - function: burger_cal_control ()
+        		Return: warning message(when burger has >1 entry)
+		| - function: calories_check()
+        		Return: warning message(when calories > 500)
+| - subpackage: freeorder
+	| - regularorder.py
+		| - Class: regularorder(order = x)
+		        Parameter: x: list of str, optional
+		| - function: burger(y)
+		        Parameter: y: str, optional
+		| - function: snack(z)
+		        Parameter: z: str, optional
+		| - function: drink(w)
+		        Parameter: w: str, optional
+		| - function: review_order()
+		        Return: list of str
+		| - function: menu()
+		        Return: table(contains menu items info)
+		| - function: next_customer()
+	| - kidsmeal.py
+		| - inherit Class from Class regularorder: kidsmeal(order = x)
+		        Parameter: x: list of str, optional
+		| - function: setGift(y)
+		        Parameter: y: str, optional
+		| - function: menu()
+		        Return: table(contains menu items info)
+		| - function: review_order()
+		        Return: warning message(when order items > 4)
+
+
+This package: menu is a simplified version for Mcdonald’s order system, it contains two sub-packages: combo and free order. 
+Subpackage combo has two modules. 
+Regularcombo: provides customer a default combo(one burger, one snack and one drink) and allow user enter combo that they want and then customize their combo, for example add more meat, add one more nuggets serve.  User can check their order result and total price.
+Dietcombo: inherit from Regularcombo, can help user check whether their drink is diet and whether total calories<500, if not a warning message will return. Also can check whether their burger is regular(no more than one entry)
+Subpackage free order has two modules. 
+Regularorder: provides a menu to customer and enable customer randomly add food they want, they can add burger, drink and snack, also they are able to review their order after add food. For next customer, it have a function for clear the previous customer's order and price result.
+Kidsmeal: inherits from regularorder, also provides a menu to user. It has one more function for children to pick up the gift they prefer. And in kidsmeal review, it suggest kid take no more than 4 food, if not, a warning message will return. Both of these two modules enable customer reviewing their selection.
