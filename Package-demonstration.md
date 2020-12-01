@@ -25,6 +25,7 @@
 <br/>Modules are designed to take free orders for both adults and kids; to make your order as a meal, please check out the `combo` subpackage.
 
 1. `regularorder` module
+<br/>!!!`pip install tabulate` required before using this module
 <br/>This module contains a class(): `regularorder`, which contains 6 functions
 <br/> - Class: `regularorder` contains 6 functions, it allow users order food they want
 <br/> - `burger()`: Take burger or wrap order

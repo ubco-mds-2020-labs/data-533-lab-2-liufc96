@@ -50,9 +50,12 @@ Package structure
 
 
 This package: menu is a simplified version for Mcdonald’s order system, it contains two sub-packages: combo and free order. 
+
 Subpackage combo has two modules. 
 Regularcombo: provides customer a default combo(one burger, one snack and one drink) and allow user enter combo that they want and then customize their combo, for example add more meat, add one more nuggets serve.  User can check their order result and total price.
 Dietcombo: inherit from Regularcombo, can help user check whether their drink is diet and whether total calories<500, if not a warning message will return. Also can check whether their burger is regular(no more than one entry)
+
 Subpackage free order has two modules. 
+!!!pip install tabulate required before using this module
 Regularorder: provides a menu to customer and enable customer randomly add food they want, they can add burger, drink and snack, also they are able to review their order after add food. For next customer, it have a function for clear the previous customer's order and price result.
 Kidsmeal: inherits from regularorder, also provides a menu to user. It has one more function for children to pick up the gift they prefer. And in kidsmeal review, it suggest kid take no more than 4 food, if not, a warning message will return. Both of these two modules enable customer reviewing their selection.
